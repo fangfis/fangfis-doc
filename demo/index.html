@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>FangJS startup demo</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="center">
+        <button class="button" id="loadV">点我加载播放插件</button>
+    </div>
+    <div id="v" class="video"></div>
+    <!-- 引入fangjs -->
+    <script src="//static.test.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js"></script>
+    <script>
+    // 配置fang.js
+    fang.config({
+        base: location.href + '/static/js',
+        ver: '2017071501'
+    });
+    // 调用入口模块
+    fang(['entry/entry_demo'], function () {
+        console.log('entry_demo 执行完成');
+    });
+    </script>
+</body>
+
+</html>
