@@ -192,7 +192,7 @@ define('modules/addTitle', [
 
 以上我们就完成了代码的编写，接下来在命令行运行如下命令，接着我们在浏览器打开`index.html`就能够看到一个如图所示的界面：
 
-> 需要注意的是，之前我们编写设置`fang.config`时，`base`的值为`//fangfis.github.io/fangfis-doc/`，因此，此时我们的js文件相对路径也为`//fangfis.github.io/fangfis-doc/`。本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。[点此查看](//fangfis.github.io/fangfis-doc/demo/)
+> 需要注意的是，之前我们编写设置`fang.config`时，`base`的值为`//fangfis.github.io/fangfis-doc/`，因此，此时我们的js文件相对路径也为`//fangfis.github.io/fangfis-doc/`。本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。<a href="/fangfis-doc/demo/">点此查看</a>
 
 > 当然，如果你打开本地的`index.html`也是正常的，因此静态资源文件的路径并没有错。具体可以查看浏览器开发者工具的`Network`一栏。
 

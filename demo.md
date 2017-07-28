@@ -1,4 +1,4 @@
-**在上一节中我们已经尝试着开发了一个[Demo](//fangfis.github.io/fangfis-doc/demo/)，[源代码](//www.github.com/fangfis/fangfis-doc/)**
+**在上一节中我们已经尝试着开发了一个Demo<a href="/fangfis-doc/demo/">点此查看</a>，[源代码](//www.github.com/fangfis/fangfis-doc/)**
 
 ## 预览
 
