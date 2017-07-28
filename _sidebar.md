@@ -8,7 +8,7 @@
 
 - [配置项](configuration.md)
 
-- [FangJS API](api.md)
+- [Fang.js API](api.md)
 
 - [FangFIS 构建](deploy.md)
 

@@ -2,14 +2,14 @@
 
 ## fang(entryID[,fn])
 
-* **参数：** 
+* **参数：**
 
     * `{String | Array} 入口ID entryID`
     * `{Function} 回调 fn [可选]`
 
 * **功能：**
 
-    `fang()` 接受的第一个参数为模块的 ID， 可以为一个字符串，或者是一个字符串组成的数组。fang.js 会根据 `pageConfig.public` 取对应路径下的 JS 文件。该 API 可置于页面作为单入口 JS 的实现(推荐)，也可以当做一个引入其它 JS 文件的方法。
+    `fang()` 接受的第一个参数为模块的 ID， 可以为一个字符串，或者是一个字符串组成的数组。Fang.js 会根据 `fang.config()` 设置的 `base` 取对应路径下的 JS 文件。该 API 可放置于页面作为单入口 JS 的实现(推荐)，也可以当做一个引入其它 JS 文件的方法。
 
 * **用法：**
 
@@ -30,19 +30,19 @@
 
 ## fang.config(options)
 
-* **参数：** 
+* **参数：**
 
     * `{Object} options 配置项`
 
-* **功能：** `fang.config()` 接收的参数为对象，是对 `fang.js` 进行配置的方法。
+* **功能：** `fang.config()` 接收的参数为对象，是对 Fang.js 进行配置的方法。
 
 * **用法：**
 
 ```javascript
-fangjs.config({
-    // fang.js 模块的基础路径，如果没设置，则取 pageConfig.public 的值
+fang.config({
+    // Fang.js 模块的基础路径，如果没设置，则取 pageConfig.public 的值
     base: location.href + '/static/js/',
-    
+
     // 2.3.2时
     ver: '2017071501'
 
@@ -60,7 +60,7 @@ fangjs.config({
     },
 
     // 变量配置
-    // 一个 fang.js 模块内随时可以取到的全局变量
+    // 一个 Fang.js 模块内随时可以取到的全局变量
     vars: pageConfig,
 
     // 文件编码。获取模块文件时，<script> 或 <link> 标签的 charset 属性。 默认是 utf-8
@@ -200,7 +200,7 @@ define('entry_02', [], function (require, exports, module) {
 
 * **功能：** `exports`用来在模块内部对外提供接口。
 
-* **用法：** 
+* **用法：**
 
 ```javascript
 define('component/loadingToast', function(require, exports) {
@@ -225,7 +225,7 @@ define('component/loadingToast', function(require, exports) {
 
 * **功能：** `exports`用来在模块内部对外提供接口。
 
-* **用法：** 
+* **用法：**
 
 ```javascript
 define('component/loadingToast', function(require, exports, module) {

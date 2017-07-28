@@ -1,22 +1,22 @@
-> FangFIS 基于 Node.js，因此在开始安装之前，确保你的系统安装了 Node.js 环境。（Nodejs >= 4.x, npm > 3.x）以下内容假设您的开发环境已经安装了 Node.js。[Nodejs官网](//nodejs.org)
+> FangFIS-CLI 基于 Node.js，因此在开始安装之前，确保你的系统安装了 Node.js 环境。（Nodejs >= 4.x, npm > 3.x）以下内容假设您的开发环境已经安装了 Node.js。[Nodejs官网](//nodejs.org)
 
-## 安装FangFIS
+## 安装FangFIS-CLI
 
-在正式开始安装FangFIS之前，建议参考以下的小提示。
+在正式开始安装FangFIS-CLI之前，建议参考以下的小提示。
 
 > 因为墙的原因，直接通过npm下载模块包的速度非常慢，因此`npm install`操作加上了`--registry`指向淘宝的镜像。我们强烈推荐安装使用cnpm，它是淘宝针对npm的镜像，可以用`cnpm install`来替代`npm install`操作。
 
 ```bash
-npm install -g fangfis
+npm install -g fangfis-cli
 // 由于墙的原因，我们建议走镜像进行安装
-npm install -g fangfis --registry=https://registry.npm.taobao.org
+npm install -g fangfis-cli --registry=https://registry.npm.taobao.org
 
 
 // 当然如果你想使用 cnpm 的话
 // 安装
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 // 以后的大部分情况下就可以通过cnpm install 来取代 npm install 操作了
-cnpm install -g fangfis
+cnpm install -g fangfis-cli
 ```
 
 ## 初始化项目
@@ -74,10 +74,10 @@ cnpm install
         <button class="button" id="loadV">点我加载播放插件</button>
     </div>
     <div id="v" class="video"></div>
-    <!-- 引入fangjs -->
+    <!-- 引入Fang.js -->
     <script src="//static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js"></script>
     <script>
-    // 配置fang.js
+    // 配置Fang.js
     fang.config({
         base: './static/js',
         ver: '2017071501'

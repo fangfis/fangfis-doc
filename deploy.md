@@ -1,12 +1,12 @@
-> fangfis-cli 是一套与 fang.js 完善结合的自动化代码构建工具。
+> FangFIS-CLI 是一套与 Fang.js 完善结合的自动化代码构建工具。
 
-fangfis-cli 是一个基于 Node 的前端构建工具，根据房天下前端开发需求进行了相应的定制，支持 CSS 的压缩、JS 的 ES6 转 ES5、合并、压缩、混淆等功能，通过 FangFIS 结合 fang.js，我们可以方便快速地处理前端静态资源文件，减少了多余的工作，提高开发效率和代码性能。
+FangFIS-CLI 是一个基于 Node 的前端构建工具，根据房天下前端开发需求进行了相应的定制，支持 CSS 的压缩、JS 的 ES6 转 ES5、合并、压缩、混淆等功能，通过 FangFIS 结合 Fang.js，我们可以方便快速地处理前端静态资源文件，减少了多余的工作，提高开发效率和代码性能。
 
-> 需要注意，本地开发的代码，必须先通过 fangfis-cli 进行构建才能发布到正式环境。
+> 需要注意，本地开发的代码，必须先通过 FangFIS-CLI 进行构建才能发布到正式环境。
 
 ## 安装
 
-fangfis-cli 基于 Node.js，因此在开始安装之前，确保你的系统安装了 Node.js 环境。(Nodejs >= 4.x, npm > 3.x)
+FangFIS-CLI 基于 Node.js，因此在开始安装之前，确保你的系统安装了 Node.js 环境。(Nodejs >= 4.x, npm > 3.x)
 
 ```bash
 $ npm install -g fangfis-cli
