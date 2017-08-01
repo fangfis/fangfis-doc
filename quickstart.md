@@ -41,10 +41,8 @@ npm install
 // or
 cnpm install
 ```
-
-## 开始编码
-
-此时项目文件夹下的项目结构大致如下：
+## 目录结构
+初始化完成后，此时项目文件夹下的项目结构大致如下：
 
 ```
 ├── dev
@@ -52,8 +50,12 @@ cnpm install
 │   ├── images
 │   └── js
 ├── package.json
+├── node_modules
 └── static
 ```
+其中dev是开发源目录，其子目录有css样式目录，img图片目录和js文件目录。static为构建目录，构建工具以dev为源目录，把构建后的css,img,js放到static相应的目录中，package.json是Node包配置文件，node_modules是安装的Node包。
+
+## 开始编码
 
 我们先创建一个`index.html`文件在项目根目录下
 
@@ -139,9 +141,9 @@ define('entry/entry_demo', [
     // 视频播放插件的异步调用
     $('#loadV').on('click', function () {
         // 加载播放器
-        require.async('//static.test.soufunimg.com/common_m/pc_public/fangplayer/build/fangPlayer.js', function (fangPlayer) {
+        require.async('//static.soufunimg.com/common_m/pc_public/fangplayer/build/fangPlayer.js', function (fangPlayer) {
             // 视频地址
-            let videourl = http://106.38.250.142/xdispatch/7xp6cu.dl1.z0.glb.clouddn.com/360.mp4;
+            let videourl = 'http://106.38.250.142/xdispatch/7xp6cu.dl1.z0.glb.clouddn.com/360.mp4';
             // 封面图
             let urlphoto = 'http://7xih9g.com1.z0.glb.clouddn.com/countdown-clock.png';
             // 视频id ，电商详情为空
@@ -191,13 +193,14 @@ define('modules/addTitle', [
 ## 构建编译
 
 以上我们就完成了代码的编写，接下来在命令行运行如下命令，接着我们在浏览器打开`index.html`就能够看到一个如图所示的界面：
+本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。<a href="http://activities.m.fang.com/fangfis-doc/demo/">点此查看</a>
 
-> 需要注意的是，之前我们编写设置`fang.config`时，`base`的值为`//fangfis.github.io/fangfis-doc/`，因此，此时我们的js文件相对路径也为`//fangfis.github.io/fangfis-doc/`。本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。<a href="/fangfis-doc/demo/">点此查看</a>
+> 需要注意的是，如果网页的目录（域名）与js的目录（域名）不相同，`base`就必须设置为一个独立的URI,而不是一个相对地址。
 
 > 当然，如果你打开本地的`index.html`也是正常的，因此静态资源文件的路径并没有错。具体可以查看浏览器开发者工具的`Network`一栏。
 
 ```
-fangfis build -w
+fangfis build
 ```
 
 <img src="https://ws2.sinaimg.cn/large/006tNc79ly1fhv5n5wc9mj30m50ffq33.jpg" style="box-shadow: 0 2px 6px rgba(0,0,0,.2)">
