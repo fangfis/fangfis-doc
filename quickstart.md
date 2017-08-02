@@ -6,7 +6,7 @@
 
 > 因为墙的原因，直接通过npm下载模块包的速度非常慢，因此`npm install`操作加上了`--registry`指向淘宝的镜像。我们强烈推荐安装使用cnpm，它是淘宝针对npm的镜像，可以用`cnpm install`来替代`npm install`操作。
 
-```bash
+```
 npm install -g fangfis-cli
 // 由于墙的原因，我们建议走镜像进行安装
 npm install -g fangfis-cli --registry=https://registry.npm.taobao.org
@@ -36,7 +36,7 @@ fangfis init
 
 初始化完成后默认会自动安装所需要的依赖模块，如果自动安装失败，请进入该目录手动安装。
 
-```bash
+```
 npm install
 // or
 cnpm install
@@ -59,7 +59,7 @@ cnpm install
 
 我们先创建一个`index.html`文件在项目根目录下
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -96,7 +96,7 @@ cnpm install
 
 然后在`dev/css`下创建一个`style.css`
 
-```
+```css
 .pageTitle {
     text-align: center;
 }
@@ -127,7 +127,7 @@ cnpm install
 
 继续在`dev/js/entry/`下创建一个`entry_demo.js`
 
-```
+```javascript
 define('entry/entry_demo', [
     'jquery',
     'modules/addTitle'
@@ -167,7 +167,7 @@ define('entry/entry_demo', [
 ```
 
 在`dev/js/modules/`下创建`addTitle.js`
-```
+```javascript
 // addTitle.js
 define('modules/addTitle', [
     'jquery'
