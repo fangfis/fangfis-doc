@@ -6,7 +6,7 @@
 
 > 因为墙的原因，直接通过npm下载模块包的速度非常慢，因此`npm install`操作加上了`--registry`指向淘宝的镜像。我们强烈推荐安装使用cnpm，它是淘宝针对npm的镜像，可以用`cnpm install`来替代`npm install`操作。
 
-```
+```bash
 npm install -g fangfis-cli
 // 由于墙的原因，我们建议走镜像进行安装
 npm install -g fangfis-cli --registry=https://registry.npm.taobao.org
@@ -36,7 +36,7 @@ fangfis init
 
 初始化完成后默认会自动安装所需要的依赖模块，如果自动安装失败，请进入该目录手动安装。
 
-```
+```bash
 npm install
 // or
 cnpm install
@@ -199,7 +199,7 @@ define('modules/addTitle', [
 
 > 当然，如果你打开本地的`index.html`也是正常的，因此静态资源文件的路径并没有错。具体可以查看浏览器开发者工具的`Network`一栏。
 
-```
+```bash
 fangfis build
 ```
 
@@ -243,7 +243,7 @@ fangfis build
 
 以上便是一个简单的`Demo`例子。编写代码，编译，发布。此时线上的代码便是经过兼容编译和压缩过的`JS`和`CSS`。
 
-相关FangFIS更多的使用方法，可以参考
+相关FangFIS更多的使用方法，可以参考 [实例解读](https://fangfis.github.io/fangfis-doc/#/demo)
 
 
 
