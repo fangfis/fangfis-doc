@@ -19,7 +19,7 @@ http://static.soufunimg.com/common_m/pc_public/fangjs/build/fang2.3.2.js
 ```
 http://static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js
 ```
-如果您在开发过程中用到jQuery,我们建议您用采用“集成jQuery”的方式引用。
+如果您在开发过程中用到jQuery,我们建议您采用“集成jQuery”的方式引用。
 
 参考以下代码：
 
