@@ -19,6 +19,7 @@ http://static.soufunimg.com/common_m/pc_public/fangjs/build/fang2.3.2.js
 ```
 http://static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js
 ```
+如果您在开发过程中用到jQuery,我们建议您用采用“集成jQuery”的方式引用。
 
 参考以下代码：
 
@@ -26,9 +27,9 @@ http://static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquer
     <!-- 引入未集成jQuery的fangjs -->
     <script src="http://static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js"></script>
     <script>
-    // 配置Fang.js
-    fang.config({
-        base: location.href + '/static/js',
+    // 配置Fang.js, 其中base为js的基础目录，可以相对目录，也可以独立的域名。
+    fang.config({
+        base: './static/js',
         ver: '2017071501'
     });
     // 调用入口模块
