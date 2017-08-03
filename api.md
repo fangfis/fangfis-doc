@@ -196,6 +196,24 @@ define('entry_02', [], function (require, exports, module) {
 
 > 注意：require.async只是发起对模块的请求，请求完成后执行callback。而如果出现模块不存在的情况（如url错误请求返回404），callback依旧会执行，因此callback的逻辑需要自行保证。
 
+## require.exec(ModuleID)
+* **功能：** 执行模块id为ModuleID的模块，如果第三方模块为cmd模块，并且其id为非全路径。无法用require和require.async执行，就需要调用该方法。
+* **用法：**
+```javascript
+require.async('//static.test.soufunimg.com/common_m/pc_public/fangplayer/build/fangPlayer2.js', function (fangPlayer) {
+    // 视频播放器对象
+    fangPlayer = require.exec('fangPlayer');
+});
+```
+
+fangPlayer2.js中的部分代码如下：
+```javascript
+define('fangPlayer', ['jquery'], function (require) {
+   var $ = require('jquery');
+   return f($,require);
+});
+```
+
 ## exports
 
 * **功能：** `exports`用来在模块内部对外提供接口。
