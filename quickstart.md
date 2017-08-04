@@ -198,6 +198,12 @@ define('modules/addTitle', [
 fangfis build
 ```
 
+这条命令主要做了两件事：
+
+1.把dev/css下的的css全部压缩，输出到static/css下
+
+2.把dev/js下的js全部进行ES6 => ES5，混淆和压缩。另外所有`entry_`开头的js都会把对应的依赖项合并给自己，以减少JS文件的请求，加快页面加载速度。
+
 具体这条命令做了什么工作，可以参考[FangFIS构建](deploy.md)部分的介绍。
 
 接着我们在浏览器打开`index.html`就能够看到一个如图所示的界面：
