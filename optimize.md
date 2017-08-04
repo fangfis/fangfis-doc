@@ -48,7 +48,7 @@ define(function () {
 我们知道，一个完整定义的模块应该包括id、依赖和函数体，例如一下
 
 ```javascript
-defien('entry/entry_A', ['modules/a'], function () {
+define('entry/entry_A', ['modules/a'], function () {
     // code here
 });
 ```
@@ -56,7 +56,7 @@ defien('entry/entry_A', ['modules/a'], function () {
 但有的时候我们又觉得每个模块都需要声明id好麻烦。其实这里的id声明是可以省略的，因为我们在FangFIS进行build操作后，会自动给没有声明id的模块添加上id。
 
 ```javascript
-defien('entry/entry_A', ['modules/a'], function () {
+define(['modules/a'], function () {
     // code here
 });
 ```
