@@ -192,18 +192,28 @@ define('modules/addTitle', [
 
 ## 构建编译
 
-以上我们就完成了代码的编写，接下来在命令行运行如下命令，接着我们在浏览器打开`index.html`就能够看到一个如图所示的界面：
-本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。<a href="http://activities.m.fang.com/fangfis-doc/demo/">点此查看</a>
-
-> 需要注意的是，如果网页的目录（域名）与js的目录（域名）不相同，`base`就必须设置为一个独立的URI,而不是一个相对地址。
-
-> 当然，如果你打开本地的`index.html`也是正常的，因此静态资源文件的路径并没有错。具体可以查看浏览器开发者工具的`Network`一栏。
+以上我们就完成了代码的编写，接下来在命令行运行如下命令：
 
 ```bash
 fangfis build
 ```
 
+这条命令主要做了两件事：
+
+1.把dev/css下的的css全部压缩，输出到static/css下
+
+2.把dev/js下的js全部进行ES6 => ES5，混淆和压缩。另外所有`entry_`开头的js都会把对应的依赖项合并给自己，以减少JS文件的请求，加快页面加载速度。
+
+具体这条命令做了什么工作，可以参考[FangFIS构建](deploy.md)部分的介绍。
+
+接着我们在浏览器打开`index.html`就能够看到一个如图所示的界面：
+本demo的路径为`//fangfis.github.io/fangfis-doc/demo/`。<a href="http://activities.m.fang.com/fangfis-doc/demo/">点此查看</a>
+
 <img src="https://ws2.sinaimg.cn/large/006tNc79ly1fhv5n5wc9mj30m50ffq33.jpg" style="box-shadow: 0 2px 6px rgba(0,0,0,.2)">
+
+> 需要注意的是，如果网页的目录（域名）与js的目录（域名）不相同，`base`就必须设置为一个独立的URI,而不是一个相对地址。
+
+> 当然，如果你打开本地的`index.html`也是正常的，因此静态资源文件的路径并没有错。具体可以通过浏览器开发者工具的`Network`一栏查看具体加载情况和路径。
 
 ## 项目结构
 

@@ -12,5 +12,9 @@
 
 - [FangFIS 构建](deploy.md)
 
+- [调试](debug.md)
+
+- [技巧与优化](optimize.md)
+
 - [更新记录](changelog.md)
 - [房天下](http://fang.com)
