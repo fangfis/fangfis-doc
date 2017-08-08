@@ -6,9 +6,9 @@
 
 我们有两个模块a.js和b.js。
 
-其中a模块里需要调用b模块里的one()方法，所以a可以直接依赖b。
+其中a模块里需要调用b模块里的two()方法，所以a可以直接依赖b。
 
-但是与此同时b模块也需要调用a模块里的two()方法，此时就不能b也依赖a了。
+但是与此同时b模块也需要调用a模块里的one()方法，此时就不能b也依赖a了。
 
 但我们可能通过emit和on方法来规避这一个问题。
 
@@ -43,20 +43,22 @@ define(function () {
 })
 ```
 
-## 定义模块时，模块ID可以省略
+## 定义模块时，可以省略模块ID和依赖项
 
 我们知道，一个完整定义的模块应该包括id、依赖和函数体，例如一下
 
 ```javascript
 define('entry/entry_A', ['modules/a'], function () {
-    // code here
+    let a = require('modules/a');
+    // code here
 });
 ```
 
 但有的时候我们又觉得每个模块都需要声明id好麻烦。其实这里的id声明是可以省略的，因为我们在FangFIS进行build操作后，会自动给没有声明id的模块添加上id。
 
 ```javascript
-define(['modules/a'], function () {
+define(function () {
+    let a = require('modules/a');
     // code here
 });
 ```
