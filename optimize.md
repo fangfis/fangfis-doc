@@ -54,8 +54,7 @@ define('entry/entry_A', ['modules/a'], function () {
 });
 ```
 
-但有的时候我们又觉得每个模块都需要声明id好麻烦。其实这里的id声明是可以省略的，因为我们在FangFIS进行build操作后，会自动给没有声明id的模块添加上id。
-
+但有的时候我们又觉得每个模块都需要声明id和依赖项好麻烦。其实这里的id声明和依赖是可以省略的，FangFIS会自动帮助添加。
 ```javascript
 define(function () {
     let a = require('modules/a');
