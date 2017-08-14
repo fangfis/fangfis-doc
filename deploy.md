@@ -28,7 +28,7 @@ $ fangfis init
 构建完成后默认自动安装所需要的依赖模块，如果自动安装失败，请进入该目录，手动安装，推荐使用cnpm安装 参考地址: [cnpm](https://npm.taobao.org/)
 
 ```bash
-$ npm install
+$ npm install --registry=https://registry.npm.taobao.org
 or
 $ cnpm install
 ```
