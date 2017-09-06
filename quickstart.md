@@ -52,9 +52,9 @@ $ cnpm install
 
 dev文件夹目前版本为构建工具预留目录，所有开发项目必须在该目录下开发，下面的css、js和images文件夹的名字不能更改。
 
-### 构建配置
+### 构建配置
 
-init自动生成默认配置文件fangfis.config.json,用户可以自定义配置选项以控制构建,配置结构如下:
+init自动生成默认配置文件fangfis.config.json,用户可以自定义配置选项以控制构建,配置结构如下:
 
 ```
 {
@@ -64,7 +64,7 @@ dev文件夹目前版本为构建工具预留目录，所有开发项目必须�
         "input": "./dev",
         // 自定义输出目录,默认为static
         "output": "./static",
-        // 模块基本路径,构建工具会自动根据该基本路径进行寻找模块
+        // 模块基本路径,构建工具会自动根据该基本路径进行寻找模块
         "base": "./dev/js",
         // 入口文件支持多种格式
         /* *main
@@ -78,15 +78,15 @@ dev文件夹目前版本为构建工具预留目录，所有开发项目必须�
             main_*tool
         */
         "main": "main",
-        // 模块合并配置项
+        // 模块合并配置项
         "combo": {
             // 忽略模块,默认jquery
             "ignore": [
                 "jquery"
             ],
-            // 需要额外处理的模块,格式同main
+            // 需要额外处理的模块,格式同main
             "addMod": ["main2"],
-            // fangjs配置
+            // fangjs配置
             "config": {
                 "alias": {
                     "jquery": "jquery",
@@ -114,7 +114,7 @@ dev文件夹目前版本为构建工具预留目录，所有开发项目必须�
             "output": "./static",
             // 端口
             "port": 21,
-            // 连接超时时间 单位:分钟
+            // 连接超时时间 单位:分钟
             "idleTimeout": 100,
             // 最大连接数
             "maxConnections": 5
@@ -168,10 +168,10 @@ $ fangfis build -o ./test1 -c -j -i -w
     -H, --host [value] FTP host, 默认为localhost
     -u, --user [value] FTP user, 默认为anonymous
     -p, --pass [value] FTP password, 默认为anonymous@
-    -o, --output [value] FTP 上传目标路径,相对FTP根路径, 默认为./static
-    -i, --input [value] FTP 上传源路径路径,相对本地路径, 默认为./static
+    -o, --output [value] FTP 上传目标路径,相对FTP根路径, 默认为./static
+    -i, --input [value] FTP 上传源路径路径,相对本地路径, 默认为./static
     -t, --type [value] FTP连接类型,一般分为测试和正式. 默认为default
     -P, --port [value] FTP 端口, 默认为21
-    -T, --idleTimeout [value] FTP连接超时时间, 默认100
+    -T, --idleTimeout [value] FTP连接超时时间, 默认100
     -m, --maxConnections [value] FTP最大连接数. 默认为5
 ```
