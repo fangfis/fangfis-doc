@@ -376,3 +376,27 @@ $ fangfis build -o ./test1 -c -j -i -w
     -T, --idleTimeout [value] FTP连接超时时间, 默认100
     -m, --maxConnections [value] FTP最大连接数. 默认为5
 ```
+### 页面调用
+创建一个index.html, 加入以下代码进行调用。
+```
+ <!-- 引入未集成jQuery的fangjs -->
+    <script src="http://static.soufunimg.com/common_m/pc_public/fangjs/build/??fang2.3.2.js,jquery/jquery-3.js"></script>
+    <script>
+    // 配置Fang.js, 其中base为js的基础目录，可以相对目录，也可以独立的域名。
+    fang.config({
+        base: './static/js',
+        ver: '2017071501'
+    });
+    // 调用入口模块
+    fang(['entry/entry_demo'], function () {
+        console.log('entry_demo 执行完成');
+    });
+    </script>
+```
+entry_demo 示例代码如下：
+
+```
+  fang('entry/entry_demo', function () {
+      console.log('调用entry_demo');
+  });
+```
